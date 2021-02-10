@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <style>
+            @font-face {
+                font-family: NBC;
+                src: url("natural_brush_chinese.otf") format("opentype");
+            }
+            .eachChar {
+                font-family: NBC;
+                font-size: 60px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="w-75 h-75">
+            <svg viewBox="0 0 100 100">
+                <defs> 
+                    <clipPath id="clip_path_study">
+                        <polygon points="54,-49 55,-40 52,-27 60,-23 48,-13 41,-14 38,-21 21,-16 20,-11 19,-8 10,-8 -1,-21 3,-43 28,-55 44,-55"/>
+                    </clipPath>
+                    <clipPath id="clip_path_king">
+                        <polygon points="53,-30 54,-17 53,4 24,7 2,6 7,-20 15,-24 18,-23 21,-21 28,-24 37,-26 43,-30 50,-31"/>
+                    </clipPath>
+                </defs>
+                <g>
+                    <text class="eachChar" transform="scale(1.5 1) translate(3 60)" clip-path="url(#clip_path_study)" >學</text>  
+                </g>
+                <g>
+                    <text class="eachChar" transform="scale(1.2 1) translate(10 68)" clip-path="url(#clip_path_king)" >覇</text>  
+                </g>
+            
+                
+            </svg>
+         </div>
+    </body>
+</html>

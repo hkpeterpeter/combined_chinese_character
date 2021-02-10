@@ -18,6 +18,15 @@
 - Arrange the characters like a square
 - Demo: [https://hkpeterpeter.github.io/combined_chinese_character/my_chinese_name.html](https://hkpeterpeter.github.io/combined_chinese_character/my_chinese_name.html)
 
+## Demo: 學覇
+
+![Image of 學覇](screenshots/king_of_study.png)
+
+- Combine the upper part of study (學) with the lower part of king (覇)
+- It means a student who is excellent in study
+- Demo: [https://hkpeterpeter.github.io/combined_chinese_character/king_of_study.html](https://hkpeterpeter.github.io/combined_chinese_character/king_of_study.html)
+
+
 ## Demo: 犧牲
 
 ![Image of 犧牲](screenshots/combined_sacrifice.png)
