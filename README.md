@@ -8,6 +8,17 @@
     - Use mouse double-click to end the polygon path
     - The clip path will be copied to another HTML/SVG document to design the combined Chinese character
 
+## Demo: 鍾啟麟
+
+![Image of 鍾啟麟](screenshots/my_chinese_name_square.png)
+
+Demo: [https://hkpeterpeter.github.io/combined_chinese_character/my_chinese_name.html](https://hkpeterpeter.github.io/combined_chinese_character/my_chinese_name.html)
+
+- Put my surname (鍾) at the top
+- Put my other names (啓麟) at the bottom
+- Clip the overlapping parts of the other names to emphasize my surname
+- Arrange the characters like a square
+
 ## Demo: 方力申
 
 ### This example illustrates how this technique is different from drawing a pure vector Graphics
