@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            @font-face {
+                font-family: NBC;
+                src: url("natural_brush_chinese.otf") format("opentype");
+            }
+
+            .eachChar {
+                font-family: NBC;
+                font-size: 30px;
+            }
+            
+
+        </style>
+    </head>
+    <body>
+        Polygon path: <br>
+        <textarea id="output_textarea" rows="2" cols="50">
+        </textarea>
+        <br>
+        <svg viewBox="-10 -30 90 70" width="600" height="600" id="my_svg">
+        
+            <g>
+                <text class="eachChar" pointer-events="visiblePainted" style="cursor:pointer;">屎</text>    
+            </g>
+        </svg>
+
+      
+
+        <script>
+            const svg =  document.getElementById("my_svg");
+            const pt = document.getElementById("my_svg").createSVGPoint();
+            let xcoords = [];
+            let ycoords = [];
+            svg.addEventListener("click", function(evt){
+                // console.log(e);
+                // ref: https://stackoverflow.com/questions/29261304/how-to-get-the-click-coordinates-relative-to-svg-element-holding-the-onclick-lis
+                // ref2: https://stackoverflow.com/questions/12752519/svg-capturing-mouse-coordinates
+                pt.x = evt.clientX;
+                pt.y = evt.clientY;
+
+                // The cursor point, translated into svg coordinates
+                var cursorpt =  pt.matrixTransform(svg.getScreenCTM().inverse());
+                var intx = parseInt(cursorpt.x);
+                var inty = parseInt(cursorpt.y);
+                console.log("(" + intx + ", " + inty + ")", "button: ", evt.button);
+                xcoords.push(intx);
+                ycoords.push(inty);
+            });
+
+            function composePoints(xcoords, ycoords) {
+                let i = 0;
+                let st = "";
+                for (i=0; i<xcoords.length; i++) {
+                    st += `${xcoords[i]},${ycoords[i]}`;
+                    if (i<xcoords.length-1)
+                        st += " ";
+                }
+                //console.log(st);
+                result = `<polygon points="${st}"/>`;
+                document.getElementById("output_textarea").textContent = result;
+            }
+
+            
+
+            svg.addEventListener("dblclick", function(evt){
+
+                if (xcoords.length>1 && ycoords.length>1) {
+                    xcoords.pop(); // remove the last click
+                    ycoords.pop();
+                    // console.log(points);
+                    console.log(xcoords);
+                    console.log(ycoords);
+
+                    composePoints(xcoords, ycoords);
+
+                    // clear an array: https://stackoverflow.com/questions/1232040/how-do-i-empty-an-array-in-javascript
+                    xcoords.splice(0,xcoords.length); 
+                    ycoords.splice(0,ycoords.length);
+                    
+                }
+                
+                
+              
+            });
+        </script>
+    </body>
+</html>

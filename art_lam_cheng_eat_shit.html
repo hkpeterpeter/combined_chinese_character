@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            @font-face {
+                font-family: NBC;
+                src: url("natural_brush_chinese.otf") format("opentype");
+            }
+            .eachChar {
+                font-family: NBC;
+                font-size: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <svg viewBox="-10 -30 90 70" width="600" height="600">
+            <defs>
+                <clipPath id="clip_path_cheng">
+                    <polygon points="16,-26 17,-22 16,-16 17,-13 17,-8 15,-2 12,0 5,0 0,1 0,-8 1,-15 4,-20 8,-25 13,-25"/>
+                </clipPath>
+                <clipPath id="clip_path_eat">
+                    <polygon points="16,-28 23,-25 26,-17 30,-7 26,-4 21,-9 17,-13 11,-12 7,-1 0,1 1,-15 11,-27" />
+                </clipPath>
+            </defs>
+            <g>
+                <text class="eachChar" transform="scale(1 0.6)">林</text>  
+            </g>
+             <g clip-path="url(#clip_path_cheng)" transform="translate(0 16) scale(1.5 0.8)">
+                <text class="eachChar">鄭</text>  
+            </g>
+            <g clip-path="url(#clip_path_eat)" transform="translate(20 5) scale(1 0.8)">
+                <text class="eachChar" >食</text>    
+            </g>
+            <g>
+                <text class="eachChar" transform="translate(22 15) scale(0.8 0.8)">屎</text>    
+            </g>
+        </svg>
+    </body>
+</html>
