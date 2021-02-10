@@ -6,16 +6,15 @@
                 font-family: NBC;
                 src: url("natural_brush_chinese.otf") format("opentype");
             }
-
             .eachChar {
                 font-family: NBC;
                 font-size: 60px;
             }
-            
-
         </style>
     </head>
     <body>
+        Character: <input type="text" id="my_text" maxlength="1" value="字" />
+        <br>
         Polygon path: <br>
         <textarea id="output_textarea" rows="2" cols="50">
         </textarea>
@@ -23,19 +22,35 @@
         <svg id="my_svg" viewBox="0 -50 160 40" width="1024" height="576" style="border: 1px solid black;">
         
             <g>
-                <text class="eachChar" pointer-events="visiblePainted" style="cursor:pointer;"
-                 >食</text>    
+                <text id="my_char" class="eachChar" pointer-events="visiblePainted" style="cursor:pointer;"
+                 >字</text>    
             </g>
          
-        </svg>
-
-      
+        </svg>  
 
         <script>
+
+            
+            
             const svg =  document.getElementById("my_svg");
             const pt = document.getElementById("my_svg").createSVGPoint();
             let xcoords = [];
             let ycoords = [];
+
+            var currentPolygon = document.createElementNS("http://www.w3.org/2000/svg", 'polygon');
+            currentPolygon.setAttribute("stroke", "none");
+            currentPolygon.setAttribute("fill-opacity", "30%");
+            svg.appendChild(currentPolygon);
+
+            document.getElementById("my_text").addEventListener("input", function(){
+                //console.log(this.value);
+                const text = this.value;
+                if (text.length === 1) {
+                    console.log(text);
+                    document.getElementById("my_char").textContent = text;
+                }
+            });
+
             svg.addEventListener("click", function(evt){
                 // console.log(e);
                 // ref: https://stackoverflow.com/questions/29261304/how-to-get-the-click-coordinates-relative-to-svg-element-holding-the-onclick-lis
@@ -50,6 +65,8 @@
                 console.log("(" + intx + ", " + inty + ")", "button: ", evt.button);
                 xcoords.push(intx);
                 ycoords.push(inty);
+
+                composePoints(xcoords, ycoords);
             });
 
             function composePoints(xcoords, ycoords) {
@@ -63,6 +80,13 @@
                 //console.log(st);
                 result = `<polygon points="${st}"/>`;
                 document.getElementById("output_textarea").textContent = result;
+
+                //var el = document.createElementNS("http://www.w3.org/2000/svg", 'polygon');
+                currentPolygon.setAttribute("points", st);
+                //el.setAttribute("stroke", "none");
+                //el.setAttribute("fill-opacity", "30%");
+                //svg.appendChild(el);
+
             }
 
             
