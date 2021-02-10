@@ -15,10 +15,9 @@
     </head>
     <body>
 
-        <div class="container p-3">
+        <div class="row p-3">
 
-   
-            <div class="w-75 h-75">
+            <div class="col-md-6">
                 <svg id="my_svg" viewBox="0 -60 80 70" style="border: 1px solid black;">
                     <g>
                         <text id="my_char" class="eachChar" pointer-events="visiblePainted" style="cursor:pointer;"
@@ -27,17 +26,17 @@
                 
                 </svg>
             </div>
-           
+            <div class="col-md-6">
                 <div class="container-fluid">
                     Character: <br>
                     <input type="text" id="my_text" maxlength="1" value="字" />
                 </div>
                 <div class="container-fluid">
                     Polygon path: <br>
-                    <textarea id="output_textarea" rows="4" cols="50" class="w-100"></textarea>
+                    <textarea id="output_textarea" rows="6" cols="50" class="w-100"></textarea>
                 </div>
+            </div>
            
-
         </div>
 
 
