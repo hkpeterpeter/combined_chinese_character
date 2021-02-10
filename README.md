@@ -16,6 +16,7 @@
 - Put my other names (啓麟) at the bottom
 - Clip the overlapping parts of the other names to emphasize my surname
 - Arrange the characters like a square
+- Demo: [https://hkpeterpeter.github.io/combined_chinese_character/my_chinese_name.html](https://hkpeterpeter.github.io/combined_chinese_character/my_chinese_name.html)
 
 ## Demo: 方力申
 
