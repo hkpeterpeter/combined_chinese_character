@@ -8,15 +8,24 @@
     - Use mouse double-click to end the polygon path
     - The clip path will be copied to another HTML/SVG document to design the combined Chinese character
 
-# Demo
+## Demo: 方力申
 
-## 學好孔孟
+### This example illustrates how this technique is different from drawing a pure vector Graphics
+
+![Image of 方力申](screenshots/beheaded_fong.png)
+
+Demo: [https://hkpeterpeter.github.io/combined_chinese_character/beheaded_fong.html](https://hkpeterpeter.github.io/combined_chinese_character/beheaded_fong.html)
+- Select all 3 Chinese characters 
+- Right-click in Chrome
+
+
+## Demo: 學好孔孟
 
 ![Image of 學好孔孟](screenshots/learn_confucianism_great.png)
 
 Demo: [https://hkpeterpeter.github.io/combined_chinese_character/learn_confucianism_great.html](https://hkpeterpeter.github.io/combined_chinese_character/learn_confucianism_great.html)
 
-## 林鄭食屎
+## Demo: 林鄭食屎
 
 ![Image of 林鄭食屎](screenshots/lam_cheng_eat_shit.png)
 
