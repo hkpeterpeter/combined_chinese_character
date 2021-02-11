@@ -7,7 +7,7 @@
     - Use mouse double-click to end the polygon path
     - The clip path will be copied to another HTML/SVG document to design the combined Chinese character
 
-[https://hkpeterpeter.github.io/combined_chinese_character/tool_generate_clip_polygon.html](https://hkpeterpeter.github.io/combined_chinese_character/tool_generate_clip_polygon.html)
+[https://hkpeterpeter.github.io/combined_chinese_character/tool_clip_polygon.html](https://hkpeterpeter.github.io/combined_chinese_character/tool_clip_polygon.html)
 
 ## Demo: 鍾啟麟
 
