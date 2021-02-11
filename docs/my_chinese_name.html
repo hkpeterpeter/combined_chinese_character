@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <style>
+            @font-face {
+                font-family: NBC;
+                src: url("natural_brush_chinese.otf") format("opentype");
+            }
+            .eachChar {
+                font-family: NBC;
+                font-size: 60px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Use bootstrap for responsive layout -->
+        <div class="container d-flex flex-row justify-content-center p-5"> 
+            <svg viewBox="-40 -40 80 80" >
+                <defs>   
+                    <clipPath id="clip_path_kai">
+                        <polygon points="-33,-5 -21,-9 -5,-15 4,-14 7,-11 10,-15 14,-14 17,-11 17,-6 14,-4 11,-1 16,3 16,11 10,18 -6,22 -29,17 -35,4"/>
+                    </clipPath>     
+                    <clipPath id="clip_path_lun">
+                        <polygon points="32,-16 17,-14 1,-9 -10,-10 -23,-5 -27,0 -30,13 -26,21 9,24 26,17"/>
+                    </clipPath>   
+                </defs>
+
+                <!-- Note:    
+                transform is applied in a reverse order 
+                [last] translate()  rotate()  scale() [first]
+                -->
+                <g transform="translate(0, 8)">
+                    <g transform="translate(0 -15) scale(1 0.7)">
+                        <text class="eachChar" 
+                        text-anchor="middle" 
+                        dominant-baseline="middle"
+                        >鍾</text> 
+                    </g>
+                    <g transform="translate(-10, 5) scale(0.7 0.9)">
+                        <text class="eachChar" 
+                        text-anchor="middle" 
+                        dominant-baseline="middle"
+                        clip-path="url(#clip_path_kai)"                
+                        >啓</text> 
+                    </g>
+                    <g transform="translate(12, 5) scale(0.7 0.9)">
+                        <text class="eachChar" 
+                        text-anchor="middle" 
+                        dominant-baseline="middle"
+                        clip-path="url(#clip_path_lun)"          
+                        >麟</text> 
+                    </g>
+                </g>
+
+                <!-- Draw X, Y axis, for better understanding -->
+                <!--
+                <line stroke-dasharray="1,1" stroke-opacity="0.5" x1="-100" y1="0" x2="100" y2="0" stroke="grey" />
+                <line stroke-dasharray="1,1" stroke-opacity="0.5" x1="0" y1="-100" x2="0" y2="100" stroke="grey" />
+                -->
+
+                 <!-- Draw an origin -->
+                 <!--
+                <circle cx="0" cy="0" r="3" fill="red" fill-opacity="0.5" />
+                 -->
+            
+            </svg>
+        </div>
+    </body>
+</html>
