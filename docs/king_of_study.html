@@ -14,25 +14,48 @@
         </style>
     </head>
     <body>
-        <div class="w-75 h-75">
-            <svg viewBox="0 0 100 100">
-                <defs> 
+        <!-- Use bootstrap for responsive layout -->
+        <div class="container d-flex flex-row justify-content-center p-5"> 
+            <svg viewBox="-40 -40 80 80" >
+                <defs>  
                     <clipPath id="clip_path_study">
-                        <polygon points="54,-49 55,-40 52,-27 60,-23 48,-13 41,-14 38,-21 21,-16 20,-11 19,-8 10,-8 -1,-21 3,-43 28,-55 44,-55"/>
+                        <polygon points="12,1 29,-3 28,-11 19,-14 24,-26 18,-37 -12,-36 -27,-21 -32,-8 -27,7 -19,8 -13,7 -8,7 -9,0 -6,-1 0,-3 7,-5 9,-4"/>
                     </clipPath>
                     <clipPath id="clip_path_king">
-                        <polygon points="53,-30 54,-17 53,4 24,7 2,6 7,-20 15,-24 18,-23 21,-21 28,-24 37,-26 43,-30 50,-31"/>
+                        <polygon points="24,-4 21,9 20,26 -12,22 -29,22 -20,-1 -11,-7 -8,-6 -4,-8 -2,-10 0,-11 7,-10 13,-13 17,-14 22,-12"/>
                     </clipPath>
                 </defs>
-                <g>
-                    <text class="eachChar" transform="scale(1.5 1) translate(3 60)" clip-path="url(#clip_path_study)" >學</text>  
+
+                <!-- Note:    
+                transform is applied in a reverse order 
+                [last] translate()  rotate()  scale() [first]
+                -->
+                <g transform="">
+                    <text class="eachChar" 
+                    text-anchor="middle" 
+                    dominant-baseline="middle"
+                    clip-path="url(#clip_path_study)"
+                    >學</text> 
                 </g>
-                <g>
-                    <text class="eachChar" transform="scale(1.2 1) translate(10 68)" clip-path="url(#clip_path_king)" >覇</text>  
+
+                <g transform="translate(0 4) scale(0.7 0.9)">
+                    <text class="eachChar" 
+                    text-anchor="middle" 
+                    dominant-baseline="middle"
+                    clip-path="url(#clip_path_king)"
+                    >覇</text> 
                 </g>
-            
-                
+
+                <!-- Draw X, Y axis, for better understanding -->
+                <!--
+                <line stroke-dasharray="1,1" stroke-opacity="0.5" x1="-100" y1="0" x2="100" y2="0" stroke="grey" />
+                <line stroke-dasharray="1,1" stroke-opacity="0.5" x1="0" y1="-100" x2="0" y2="100" stroke="grey" />
+                -->
+                 <!-- Draw an origin -->
+                 <!--
+                <circle cx="0" cy="0" r="3" fill="red" fill-opacity="0.5" />
+                 -->
             </svg>
-         </div>
+        </div>
     </body>
 </html>
