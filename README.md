@@ -37,4 +37,14 @@
 
 - Clip a small area of overlapping region
 - Add gradient effect on 3 characters
-- [https://hkpeterpeter.github.io/combined_chinese_character/combined_sacrifice.html](https://hkpeterpeter.github.io/combined_chinese_character/combined_sacrifice.html)
+
+[https://hkpeterpeter.github.io/combined_chinese_character/combined_sacrifice.html](https://hkpeterpeter.github.io/combined_chinese_character/combined_sacrifice.html)
+
+## Demo: 春聯
+
+
+![Image of 春聯1](screenshots/zoom_left_banner.png) ![Image of 春聯2](screenshots/zoom_right_banner.png)
+
+[https://hkpeterpeter.github.io/combined_chinese_character/my_left_banner.html](https://hkpeterpeter.github.io/combined_chinese_character/my_left_banner.html)
+
+[https://hkpeterpeter.github.io/combined_chinese_character/my_right_banner.html](https://hkpeterpeter.github.io/combined_chinese_character/my_right_banner.html)
