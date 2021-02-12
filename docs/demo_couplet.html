@@ -5,7 +5,7 @@
         <style>
             @font-face {
                 font-family: NBC;
-                src: url("../docs/natural_brush_chinese.otf") format("opentype");
+                src: url("natural_brush_chinese.otf") format("opentype");
             }
             .eachChar {
                 font-family: NBC;
@@ -15,21 +15,14 @@
     </head>
     <body>
         <!-- Use bootstrap for responsive layout -->
-        <div class="container d-flex flex-row justify-content-center p-5"> 
+        <div class="d-flex flex-row justify-content-center vh-100"> 
             <svg viewBox="-15 -30 30 95" class="px-5">
-                <defs>  
-                    <linearGradient spreadMethod="pad" id="gradient_red" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" style="stop-color:rgb(255, 0, 0);stop-opacity:1;" />
-                            <stop offset="100%" style="stop-color:rgb(192, 0, 0);stop-opacity:1;" />
-                    </linearGradient>
-             
-                </defs>
-
+               
                 <!-- Note:    
                 transform is applied in a reverse order 
                 [last] translate()  rotate()  scale() [first]
                 -->
-                <rect fill="url(#gradient_red)" x="-15" y="-30" width="30" height="95" />
+                <rect fill="red" x="-15" y="-30" width="30" height="95" />
 
                 <g transform="translate(0 -19) scale(0.8 0.8)">
                     <text class="eachChar" 
@@ -82,7 +75,7 @@
                 transform is applied in a reverse order 
                 [last] translate()  rotate()  scale() [first]
                 -->
-                <rect fill="url(#gradient_red)" x="-15" y="-30" width="30" height="95" />
+                <rect fill="red" x="-15" y="-30" width="30" height="95" />
 
                 <g transform="translate(0 -19) scale(0.8 0.8)">
                     <text class="eachChar" 
